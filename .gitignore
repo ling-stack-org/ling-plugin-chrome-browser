@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.ling-plugin-runtime/
+extension/dist/
+extension/ling-for-chrome.zip
+host/dist/
+host/native/target/
