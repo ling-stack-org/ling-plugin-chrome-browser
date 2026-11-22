@@ -11,6 +11,6 @@ pnpm package:mac
 pnpm package:win
 ```
 
-The extension remains Chrome Web Store-owned for production browser installation. The independent Ling plugin package contains the reviewed extension archive and platform Native Host so Desktop can install or update them from the signed catalog.
+Install and update the browser extension through the Chrome Web Store. The Ling plugin package contains the reviewed extension archive and the platform Native Host. Ling Desktop verifies the package, then registers the selected Native Host on restart.
 
 See the [Chrome integration contract](docs/chrome-browser-built-in-plugin.md) and [release workflow](docs/RELEASE.md). The [extension directory](extension/) owns storefront copy, privacy and submission instructions.
