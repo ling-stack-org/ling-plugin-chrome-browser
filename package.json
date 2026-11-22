@@ -6,12 +6,18 @@
   "license": "MIT",
   "scripts": {
     "build:extension": "node extension/scripts/build.mjs",
-    "build:host": "pnpm --dir host build:native",
-    "test": "pnpm --dir host test && node --test extension/test/*.test.ts",
-    "stage:mac": "pnpm build:extension && pnpm build:host && node scripts/stage-runtime.mjs --platform=darwin --arch=arm64",
-    "stage:win": "pnpm build:extension && pnpm build:host && node scripts/stage-runtime.mjs --platform=win32 --arch=x64",
-    "package:mac": "pnpm stage:mac && node scripts/package-plugin.mjs --root .ling-plugin-runtime --output dist --platform darwin --arch arm64 --channel stable --repository ling-stack-org/ling-plugin-chrome-browser",
-    "package:win": "pnpm stage:win && node scripts/package-plugin.mjs --root .ling-plugin-runtime --output dist --platform win32 --arch x64 --channel stable --repository ling-stack-org/ling-plugin-chrome-browser"
+    "build:host": "node host/scripts/build-native.mjs",
+    "test": "corepack pnpm --dir extension typecheck && corepack pnpm --dir extension test:ci && cargo test --locked --manifest-path host/native/Cargo.toml",
+    "package:mac": "corepack pnpm build:extension && corepack pnpm build:host && node scripts/stage-runtime.mjs darwin arm64",
+    "package:win": "corepack pnpm build:extension && corepack pnpm build:host && node scripts/stage-runtime.mjs win32 x64"
   },
-  "devDependencies": { "jszip": "3.10.2" }
+  "devDependencies": {
+    "jszip": "3.10.2",
+    "typescript": "7.0.2",
+    "@types/node": "26.6.6"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=22.22.1"
+  }
 }

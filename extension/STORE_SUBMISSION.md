@@ -89,10 +89,10 @@ The output is `/tmp/ling-plugin-manager-chrome-light.png` and
 
 ## Release Gate
 
-1. Run `corepack pnpm --filter @ling-stack/chrome-extension test`.
+1. Run `corepack pnpm --dir extension test`.
 2. Confirm the committed manifest key derives Dashboard Item ID
    `mbmlnnfhebclljonhedpjghbhibfapei`.
-3. Run `corepack pnpm --filter @ling-stack/chrome-extension build` twice, confirm the ZIP hash is
+3. Run `corepack pnpm --dir extension build` twice, confirm the ZIP hash is
    stable, and verify the built ID equals the Dashboard Item ID.
 4. Complete privacy, permission, listing, contact, and reviewer-instruction fields.
 5. In an isolated official Chrome profile, load `apps/chrome-extension/dist` and verify automatic

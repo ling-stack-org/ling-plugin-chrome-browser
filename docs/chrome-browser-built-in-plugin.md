@@ -14,7 +14,7 @@ whose six tools operate the user's existing Google Chrome profile after the exte
 the plugin is enabled, and the normal MCP approval is granted.
 
 The Desktop in-app browser uses its own profile and runtime, tracked in the
-[Desktop Browser Implementation Plan](desktop-browser-implementation-plan.md). Its tools do not
+[Desktop Browser Implementation Plan](https://github.com/ling-stack-org/ling-stack/blob/main/docs/design/desktop-browser-implementation-plan.md). Its tools do not
 automatically reuse this external Chrome connection or signed-in profile.
 
 Version `0.1.2` uses Chrome Native Messaging for automatic local discovery and persistent MV3

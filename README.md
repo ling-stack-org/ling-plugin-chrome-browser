@@ -13,4 +13,4 @@ pnpm package:win
 
 The extension remains Chrome Web Store-owned for production browser installation. The independent Ling plugin package contains the reviewed extension archive and platform Native Host so Desktop can install or update them from the signed catalog.
 
-See [docs/chrome-browser-built-in-plugin.md](docs/chrome-browser-built-in-plugin.md) for the protocol and security contract.
+See the [Chrome integration contract](docs/chrome-browser-built-in-plugin.md) and [release workflow](docs/RELEASE.md). The [extension directory](extension/) owns storefront copy, privacy and submission instructions.

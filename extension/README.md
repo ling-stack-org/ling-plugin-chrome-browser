@@ -4,10 +4,10 @@ Ling for Chrome is the auditable Manifest V3 extension used by the built-in Chro
 
 Production installation remains Chrome Web Store-owned. For local development only:
 
-1. Run `corepack pnpm --filter @ling-stack/chrome-extension build`.
+1. Run `corepack pnpm --dir extension build`.
 2. Open `chrome://extensions`, enable Developer mode, and choose `Load unpacked`.
-3. Select `apps/chrome-extension/dist`.
-4. Run `corepack pnpm ling browser-host install` once for this source checkout.
+3. Select `extension/dist`.
+4. In the companion [Ling source checkout](https://github.com/ling-stack-org/ling-stack), run `corepack pnpm ling browser-host install` once to register the development host.
 5. Enable Chrome in Ling Plugin Manager. The extension connects automatically while Ling is running.
 
 The extension does not request access to cookies, passwords, history, bookmarks, downloads,
