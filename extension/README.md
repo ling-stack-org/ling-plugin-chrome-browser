@@ -2,7 +2,9 @@
 
 Ling for Chrome is the auditable Manifest V3 extension used by the built-in Chrome plugin.
 
-Production installation remains Chrome Web Store-owned. For local development only:
+Install the production extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/ling-for-chrome/mbmlnnfhebclljonhedpjghbhibfapei).
+
+To test a local build in Chrome, follow these steps.
 
 1. Run `corepack pnpm --dir extension build`.
 2. Open `chrome://extensions`, enable Developer mode, and choose `Load unpacked`.
